@@ -1,0 +1,15 @@
+localhost ansible_host=127.0.0.1
+
+[masters]
+master ansible_host=192.168.10.1
+
+[workers]
+worker01 ansible_host=192.168.10.2
+worker02 ansible_host=192.168.10.3
+worker03 ansible_host=192.168.10.4
+worker04 ansible_host=192.168.10.5
+
+[ubuntu:children]
+masters
+workers
+
